@@ -1,0 +1,186 @@
+/* --- General --- */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, Roboto, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+/* --- Fonts --- */
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url(./fonts/Roboto-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 900;
+  src: local('Roboto'), url(./fonts/Roboto-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 900;
+  src: local('Roboto'), url(./fonts/Roboto-Black.ttf) format('truetype');
+}
+
+/* --- App component --- */
+
+main {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: #FF6700;
+  overflow: visible;
+}
+
+/* --- Expression component --- */
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+
+.logo {
+  position: relative;
+  width: 25vw;
+  height: auto;
+  margin-bottom: 1.5rem;
+
+}
+
+/* --- Random expression --- */
+
+.expression {
+  background: #FFFFFF;
+  height: 85vh;
+  width: 80vw;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.expression-img {
+  position: relative;
+  max-width: 70vw;
+  max-height: 50vh;
+  filter: drop-shadow(-6px 6px 10px rgba(255, 103, 0, 0.12));
+  border-radius: 10px;
+}
+
+.expression-word {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
+  font-size: 2rem;
+  color: #222222;
+  position: relative;
+}
+
+/* --- Expression form --- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* --- Text input --- */
+
+input {
+  position: relative;
+  width: 36vw;
+  height: 2rem;
+  background: #FFFFFF;
+  box-shadow: -6px 6px 10px rgba(255, 103, 0, 0.3), 6px -6px 10px rgba(231, 190, 163, 0.3);
+  border-radius: 10px;
+  border: #FFFFFF;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  max-height: 100vh;
+  outline: 1px solid;
+  outline-color: grey;
+  outline-offset: 0px;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+input:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+
+/* --- Submit button --- */
+
+button {
+  position: relative;
+  width: 20vw;
+  height: 2rem;
+  background: #FF6700;
+  border: #FF6700;
+  border-radius: 10px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  color: #FFFFFF;
+  outline: 1px solid;
+  outline-color: grey;
+  outline-offset: 0px;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+button:hover {
+  cursor: pointer;
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+
+/* --- Counters --- */
+
+.counter {
+  font-size: 2rem;
+  color: #FF6700;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: auto;
+  gap: 20vw;
+  max-height: 100vh;
+}
+
+.correct-counter {
+  position: relative;
+  text-align: end;
+}
+
+.incorrect-counter {
+  position: relative;
+}
